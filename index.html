@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Shaked Miller – Berlin-based rapper, singer and producer. CV, EPK and portfolio.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shaked Miller – CV · EPK · Portfolio">
@@ -169,40 +169,86 @@ footer a{color:#5B3A26}
 #portfolio .toc{position:absolute;right:15mm;bottom:20mm;color:var(--sand);font-size:8.6pt;text-align:right;line-height:1.6}
 
 @media (max-width:700px){
- .doc{padding:12px 0 30px}
- .doc .page{zoom:1 !important;width:auto !important;height:auto !important;min-height:0 !important;padding:26px 18px 34px !important;margin:0 10px 14px !important;overflow:hidden;display:block !important}
+ html,body{background:#F6EFE3}
+ body{font-size:15px;-webkit-text-size-adjust:100%}
+ nav{position:sticky !important;top:0;padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));flex-wrap:nowrap;gap:4px}
+ nav .brand{font-size:16px}
+ nav .brand span{display:none}
+ nav a.tab{font-size:11px;letter-spacing:1.2px;padding:7px 11px}
+ .doc{padding:0 0 10px !important}
+ div.doc{background:#F6EFE3 !important}
+ .doc .page{zoom:1 !important;width:auto !important;height:auto !important;min-height:0 !important;margin:0 !important;padding:30px 20px 30px !important;box-shadow:none !important;border-radius:0 !important;border-bottom:1px solid #E1D2BC;overflow:hidden;display:block !important;background:transparent !important}
  .doc .page > *{max-width:100%}
- .doc [style*="grid-template-columns"]:not(.g){grid-template-columns:1fr !important}
- .doc .cols,.doc .grid2,.doc .quotes{grid-template-columns:1fr !important;display:grid;gap:14px}
- .doc .stats{flex-wrap:wrap;gap:16px !important}
+ .doc .foot,.doc .draft,.doc .cover .toc{display:none !important}
+ .doc .kicker{font-size:11px;letter-spacing:2px;margin-bottom:6px}
+ .doc h2{font-size:34px !important;line-height:1.02 !important;margin-bottom:16px !important}
+ .doc h3{font-size:15px !important;margin:22px 0 8px !important}
+ .doc p,.doc li,.doc dd{font-size:15px !important;line-height:1.55 !important}
+ .doc .lead{font-size:15px !important;margin-bottom:18px}
+ .doc [style*="grid-template-columns"]:not(.g){grid-template-columns:1fr !important;gap:14px !important}
+ .doc .cols,.doc .grid2,.doc .quotes{display:grid;grid-template-columns:1fr !important;gap:14px !important}
  .doc .grid2 > *,.doc .cols > *,.doc .quotes > *,.doc [style*="grid-template-columns"]:not(.g) > *{grid-column:auto !important;grid-row:auto !important}
- .doc .g{grid-template-columns:1fr 1fr !important;grid-template-rows:none !important;grid-auto-rows:46vw !important}
- .doc .g > .cell{grid-column:auto !important;grid-row:auto !important}
- .doc .g > .cell:first-child{grid-column:1 / -1 !important}
- .doc .g .cell[style*="grid-column:1/3"],.doc .g .cell h3{grid-column:1 / -1 !important}
- .doc .g > .cell:not(:has(img)){grid-column:1 / -1 !important;height:auto}
+ .doc .stats{display:grid !important;grid-template-columns:1fr 1fr;gap:16px !important;margin-bottom:20px !important}
+ .doc .stat{font-size:28px !important}
+ .doc .stat small{font-size:10px !important}
+ /* photo grids */
+ .doc .g{grid-template-columns:1fr 1fr !important;grid-template-rows:none !important;grid-auto-rows:auto !important;gap:8px !important;margin-top:8px !important}
+ .doc .g > .cell{grid-column:auto !important;grid-row:auto !important;aspect-ratio:1/1;height:auto !important}
+ .doc .g > .cell:first-child{grid-column:1 / -1 !important;aspect-ratio:4/3}
+ .doc .g > .cell:not(:has(img)){grid-column:1 / -1 !important;aspect-ratio:auto}
+ .doc .g img{border-radius:8px !important}
+ .doc .g .fit,.doc .g .fitw{grid-column:1 / -1 !important;aspect-ratio:auto !important}
+ .doc .g .fit img,.doc .g .fitw img{height:auto !important;max-height:none}
+ .doc .cell .tag{font-size:10.5px !important;left:8px !important;bottom:8px !important;padding:3px 7px !important;border-radius:5px !important}
+ .doc .venues{font-size:11px !important;line-height:1.6;margin-top:12px !important}
+ /* lists */
  .doc .hl,.doc .list{columns:1 !important}
- .doc h2{font-size:30px !important}
- .doc .foot{position:static !important;margin-top:18px}
- .doc .draft{display:none}
- .doc .cover{min-height:130vw !important;padding:0 !important}
- .doc .cover h1{font-size:64px !important}
- .doc .cover .txt{left:18px;right:18px;bottom:22px}
- .doc .cover .toc{display:none}
- .doc .cover .roles{font-size:11px;letter-spacing:2px}
- .doc .cell .tag{font-size:10px}
- .doc .short{font-size:16px}
- .doc .q{font-size:20px}
- .doc .contact .big{font-size:20px;word-break:break-all}
- .doc .page [style*="position:absolute"]:not(img):not(.shade):not(.txt):not(.top):not(.epk){position:static !important;margin-top:16px}
+ .doc .hl li,.doc .list li{margin-bottom:10px !important}
+ .doc .card{padding:18px !important;border-radius:10px !important}
+ .doc .card .who{font-size:20px !important}
+ .doc .card .role{font-size:10.5px !important}
+ .doc .card p{font-size:14.5px !important}
+ /* cover */
+ .doc .cover{min-height:88vh !important;padding:0 !important;border:0 !important;position:relative}
+ .doc .cover h1{font-size:68px !important}
+ .doc .cover .txt{left:22px !important;right:22px !important;bottom:30px !important}
+ .doc .cover .he{font-size:22px !important}
+ .doc .cover .roles{font-size:11.5px !important;letter-spacing:2px !important;line-height:1.6}
+ .doc .cover .tagl{font-size:14px !important}
+ .doc .cover .top,.doc .cover .epk{left:22px !important;top:22px !important;font-size:10px !important}
+ /* bio */
+ .doc .short{font-size:17px !important;line-height:1.5 !important;padding-left:14px !important;margin-bottom:22px !important}
+ .doc .side{padding:18px !important;border-radius:10px !important}
+ .doc .side dl dt{font-size:10px !important}
+ .doc .q{font-size:22px !important}
+ .doc .q small{font-size:10px !important}
+ .doc .contact{padding:22px !important;border-radius:10px !important}
+ .doc .contact .big{font-size:18px !important;word-break:break-all}
+ .doc .page[style*="background:var(--brown)"]{background:#5B3A26 !important;padding:40px 22px !important}
+ .doc .page [style*="position:absolute"]:not(img):not(.shade):not(.txt):not(.top):not(.epk){position:static !important;margin-top:18px}
+ /* tour / cv years */
+ .doc .yr{grid-template-columns:52px 1fr !important;margin-bottom:16px !important}
+ .doc .yr > b{font-size:20px !important}
+ .doc .yr li{font-size:14.5px !important;line-height:1.5 !important;margin-bottom:7px !important}
+ .doc .yr li i,.doc .hl li i,.doc .list li i{font-size:12px !important}
+ /* cv */
  #cv .page{display:block !important}
- #cv aside{margin-bottom:16px}
- #cv header{flex-direction:column;align-items:flex-start;gap:8px}
- #cv h1{font-size:44px}
- #cv .tag{text-align:left}
- body{font-size:15px}
- .doc .page p,.doc .page li,.doc .page dd{font-size:14px !important;line-height:1.5}
- .doc .yr li i,.doc .hl li i{font-size:12px !important}
+ #cv header{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:18px !important}
+ #cv header > div:last-child{text-align:left !important}
+ #cv h1{font-size:46px !important}
+ #cv .tag{text-align:left !important}
+ #cv aside{margin-bottom:22px;padding:18px !important;border-radius:10px !important}
+ #cv aside h3{font-size:14px !important}
+ #cv aside li,#cv aside p{font-size:14px !important}
+ #cv .pill{font-size:12px !important;padding:3px 9px !important}
+ #cv .summary{font-size:15.5px !important;line-height:1.55 !important}
+ #cv main h2{font-size:22px !important}
+ #cv .item .t{font-size:15px !important}
+ #cv .item .d{font-size:11px !important}
+ #cv .item{margin-bottom:16px !important}
+ #cv .page h2[style]{font-size:22px !important}
+ #cv .page ul[style*="columns"]{columns:1 !important}
+ footer{padding:22px 20px calc(30px + env(safe-area-inset-bottom)) !important;line-height:1.7}
 }
 </style></head><body>
 <nav><div class="brand">Shaked Miller<span>שקד מילר</span></div>
