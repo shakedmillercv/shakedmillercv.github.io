@@ -167,6 +167,42 @@ footer a{color:#5B3A26}
 #portfolio .cover .roles{font-size:10.5pt;letter-spacing:3pt;text-transform:uppercase;font-weight:700;margin-top:4mm}
 #portfolio .cover .top{position:absolute;top:14mm;left:15mm;color:var(--sand);font-size:9pt;letter-spacing:3pt;font-weight:700}
 #portfolio .toc{position:absolute;right:15mm;bottom:20mm;color:var(--sand);font-size:8.6pt;text-align:right;line-height:1.6}
+
+@media (max-width:700px){
+ .doc{padding:12px 0 30px}
+ .doc .page{zoom:1 !important;width:auto !important;height:auto !important;min-height:0 !important;padding:26px 18px 34px !important;margin:0 10px 14px !important;overflow:hidden;display:block !important}
+ .doc .page > *{max-width:100%}
+ .doc [style*="grid-template-columns"]:not(.g){grid-template-columns:1fr !important}
+ .doc .cols,.doc .grid2,.doc .quotes{grid-template-columns:1fr !important;display:grid;gap:14px}
+ .doc .stats{flex-wrap:wrap;gap:16px !important}
+ .doc .g{grid-template-columns:1fr 1fr !important;grid-template-rows:none !important;grid-auto-rows:46vw !important}
+ .doc .g > .cell{grid-column:auto !important;grid-row:auto !important}
+ .doc .g > .cell:first-child{grid-column:1 / -1 !important}
+ .doc .g .cell[style*="grid-column:1/3"],.doc .g .cell h3{grid-column:1 / -1 !important}
+ .doc .g > .cell:not(:has(img)){grid-column:1 / -1 !important;height:auto}
+ .doc .hl,.doc .list{columns:1 !important}
+ .doc h2{font-size:30px !important}
+ .doc .foot{position:static !important;margin-top:18px}
+ .doc .draft{display:none}
+ .doc .cover{min-height:130vw !important;padding:0 !important}
+ .doc .cover h1{font-size:64px !important}
+ .doc .cover .txt{left:18px;right:18px;bottom:22px}
+ .doc .cover .toc{display:none}
+ .doc .cover .roles{font-size:11px;letter-spacing:2px}
+ .doc .cell .tag{font-size:10px}
+ .doc .short{font-size:16px}
+ .doc .q{font-size:20px}
+ .doc .contact .big{font-size:20px;word-break:break-all}
+ .doc .page [style*="position:absolute"]:not(img):not(.shade):not(.txt):not(.top):not(.epk){position:static !important;margin-top:16px}
+ #cv .page{display:block !important}
+ #cv aside{margin-bottom:16px}
+ #cv header{flex-direction:column;align-items:flex-start;gap:8px}
+ #cv h1{font-size:44px}
+ #cv .tag{text-align:left}
+ body{font-size:15px}
+ .doc .page p,.doc .page li,.doc .page dd{font-size:14px !important;line-height:1.5}
+ .doc .yr li i,.doc .hl li i{font-size:12px !important}
+}
 </style></head><body>
 <nav><div class="brand">Shaked Miller<span>שקד מילר</span></div>
 <a class="tab" href="#cv">CV</a><a class="tab" href="#epk">EPK</a><a class="tab" href="#portfolio">Portfolio</a></nav>
@@ -839,7 +875,7 @@ footer a{color:#5B3A26}
 </section>
 <footer>shakedmillermusic@gmail.com · +49 1522 9258660 · <a href="https://shakedmiller.com/">shakedmiller.com</a> · <a href="https://www.instagram.com/shakedmiller/">@shakedmiller</a></footer>
 <script>
-function fit(){var w=Math.min(1,(window.innerWidth-16)/794);document.body.style.setProperty('--z',w)}
+function fit(){var w=window.innerWidth<=700?1:Math.min(1,(window.innerWidth-16)/794);document.body.style.setProperty('--z',w)}
 function show(){var h=(location.hash||'#epk').slice(1);if(!['cv','epk','portfolio'].includes(h))h='epk';
 document.querySelectorAll('.doc').forEach(function(s){s.hidden=s.id!==h});
 document.querySelectorAll('nav a.tab').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h)});window.scrollTo(0,0)}
