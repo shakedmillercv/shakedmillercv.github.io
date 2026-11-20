@@ -250,10 +250,28 @@ footer a{color:#5B3A26}
  #cv .page ul[style*="columns"]{columns:1 !important}
  footer{padding:22px 20px calc(30px + env(safe-area-inset-bottom)) !important;line-height:1.7}
 }
+
+.reel{width:210mm;margin:0 auto 22px;zoom:var(--z);background:#2A1C13;color:#F6EFE3;border-radius:3px;box-shadow:0 6px 30px rgba(42,28,19,.18);padding:12mm 15mm;display:grid;grid-template-columns:1fr 78mm;gap:10mm;align-items:center}
+.reel .rk{color:#C48C64 !important;font-size:8.5pt;letter-spacing:2pt;text-transform:uppercase;color:#C48C64;font-weight:700;margin-bottom:2mm}
+.reel h2{font-family:Anton,sans-serif !important;font-weight:400;font-size:40pt !important;line-height:.95 !important;text-transform:uppercase;color:#F6EFE3 !important;margin:0 0 4mm !important;display:block !important}
+.reel p{font-size:10.5pt !important;color:#E9DCC7 !important;line-height:1.5 !important}
+.reel .vbox{position:relative;aspect-ratio:9/16;border-radius:2mm;overflow:hidden;background:#000}
+.reel video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.reel .play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-bottom:18%;background:rgba(42,28,19,.25);border:0;cursor:pointer;color:#F6EFE3;font:700 12px "DM Sans",sans-serif;letter-spacing:2px;text-transform:uppercase}
+.reel .play span.c{width:64px;height:64px;border-radius:50%;background:#F6EFE3;display:flex;align-items:center;justify-content:center}
+.reel .play span.c::after{content:"";border-left:20px solid #2A1C13;border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
+.reel .play[hidden]{display:none}
+@media (max-width:700px){.reel h2{font-size:34px !important}.reel p{font-size:15px !important}.reel{width:auto;zoom:1;margin:0;border-radius:0;box-shadow:none;padding:30px 20px;display:block}.reel h2{font-size:34px}.reel .rk{color:#C48C64 !important;font-size:11px}.reel p{font-size:15px;margin-bottom:16px}.reel .vbox{max-width:420px;margin:0 auto}}
+
+.reel.inline{width:auto;zoom:1;margin:0 0 6mm;box-shadow:none;border-radius:2mm;padding:6mm 7mm;grid-template-columns:1fr 50mm;gap:6mm}
+.reel.inline h2{font-size:24pt !important}
+.reel.inline p{font-size:9.5pt !important}
+#epk .page.biopage{height:auto !important;min-height:297mm}
+@media (max-width:700px){.reel.inline{margin:0 0 22px;padding:22px 18px;border-radius:10px}.reel.inline h2{font-size:28px !important}.reel.inline p{font-size:15px !important}}
 </style></head><body>
 <nav><div class="brand">Shaked Miller<span>שקד מילר</span></div>
 <a class="tab" href="#cv">CV</a><a class="tab" href="#epk">EPK</a><a class="tab" href="#portfolio">Portfolio</a></nav>
-<div id="cv" class="doc" hidden>
+<div id="cv" class="doc" hidden><div class="reel"><div><div class="rk">Showreel · 2026</div><h2>Watch<br>Shaked live</h2><p>Two minutes from the 2026 live shows – rap, R&amp;B and a band that hits hard.</p></div><div class="vbox"><video class="reelv" playsinline preload="none" poster="reel_poster.jpg"></video><button class="play" type="button"><span class="t">Play showreel</span><span class="c"></span></button></div></div>
 
 <div class="page">
 <header>
@@ -270,6 +288,7 @@ footer a{color:#5B3A26}
  </ul>
  <h3>Links</h3>
  <ul>
+  <li><a href="https://shakedmillercv.github.io/#epk"><b>▶ Showreel 2026</b></a></li>
   <li><a href="https://shakedmiller.com/">shakedmiller.com</a></li>
   <li><a href="https://www.instagram.com/shakedmiller/">Instagram @shakedmiller</a> · 31.4K</li>
   <li><a href="https://www.tiktok.com/@shaked.miller4">TikTok @shaked.miller4</a></li>
@@ -417,18 +436,19 @@ footer a{color:#5B3A26}
 </div>
 
 <!-- 2 BIO -->
-<div class="page">
+<div class="page biopage">
  <div class="kicker">About</div>
  <h2>Bio</h2>
  <div class="cols">
   <div>
-   <p class="short">Shaked Miller is a Berlin-based rapper, singer and producer writing in English and Hebrew. Live, it's Eminem meets Rage Against the Machine. She produced Yeled's <a href="https://open.spotify.com/track/2Ozdz3Hhfigkq8U9XW4f0Z">"Gveret Taltalim"</a> (Universal Music Israel), writes and performs in <a href="https://www.waves.com/">Waves Audio</a> campaigns, and has opened for <a href="https://www.instagram.com/n.tayeb/">Ninet Tayeb</a> and <a href="https://www.instagram.com/oivavoiband/">Oi Va Voi</a>.</p>
+   <p class="short">Shaked Miller is a Berlin-based rapper, singer and producer writing in English and Hebrew – a proud Jewish and queer voice whose new songs confront antisemitism head-on. Live, it's Eminem meets Rage Against the Machine. She produced Yeled's <a href="https://open.spotify.com/track/2Ozdz3Hhfigkq8U9XW4f0Z">"Gveret Taltalim"</a> (Universal Music Israel), writes and performs in <a href="https://www.waves.com/">Waves Audio</a> campaigns, and has opened for <a href="https://www.instagram.com/n.tayeb/">Ninet Tayeb</a> and <a href="https://www.instagram.com/oivavoiband/">Oi Va Voi</a>.</p><div class="reel inline"><div><div class="rk">Showreel · 2026</div><h2>Watch<br>Shaked live</h2><p>Two minutes from the 2026 live shows – rap, R&amp;B and a band that hits hard.</p></div><div class="vbox"><video class="reelv" playsinline preload="none" poster="reel_poster.jpg"></video><button class="play" type="button"><span class="t">Play showreel</span><span class="c"></span></button></div></div>
    <div class="long">
     <h3>Long bio</h3>
-    <p>Shaked Miller blends punchy rap with sultry R&amp;B, drawing on Eminem, Justin Timberlake and Lauryn Hill. She raps and sings about Jewish identity, loving women and the freedom to be who you are without apologising – honest and unapologetic, because humanity is weird.</p>
-    <p>Her debut album <a href="https://open.spotify.com/album/5LxutKVQ1TpdWIyLvc70zU"><i>Best of This World</i></a> – songs about self-exploration and sexuality, released with <a href="https://www.instagram.com/kamea_music/">Kamea</a> (2020–2023) – introduced singles like <a href="https://open.spotify.com/album/7jkb1ZBkgwLnFZrnxkotW1">"Hold On"</a>, <a href="https://open.spotify.com/album/6PWegWUrGbbIWNMQJShJnl">"Get The Girl"</a>, <a href="https://open.spotify.com/album/27J4WCR0CBYhMHspjzhbAq">"Clouds"</a> and <a href="https://open.spotify.com/album/1P1DvQHePHoTH6N9CIUUsi">"Take It All Away"</a> with <a href="https://www.instagram.com/galdepaz/">Gal De Paz</a>. Her new, unreleased material pairs raw lyrics with Y2K-flavoured production, covering self-reflection, social critique and long-term partnership.</p>
-    <p>Behind the desk she produced and arranged Yeled's <a href="https://open.spotify.com/track/2Ozdz3Hhfigkq8U9XW4f0Z">"Gveret Taltalim"</a> (1.3M+ Spotify streams, Apple Music Israel Top 100), writes and records as a songwriter and vocalist for <a href="https://artlist.io/royalty-free-music/artist/shaked-miller/2594">Artlist Originals</a>, and has fronted <a href="https://www.waves.com/">Waves Audio</a> ads and social content since 2023. She executive-produced Noyo's <a href="https://open.spotify.com/track/2nk1uIx4EF0fTgqGKqcLCl">"Not Here"</a> and produces Shiran Levy. She co-wrote on <a href="https://www.instagram.com/galdepaz/">Gal De Paz</a>'s album <a href="https://open.spotify.com/album/4yFYmZHi8ucac5MZ19SiWU"><i>Very That</i></a> and featured on <a href="https://www.instagram.com/themosesguy/">Guy Moses</a>' <a href="https://open.spotify.com/album/5MpXC8mEUSX5lIWw1hQnWk">"Priorities"</a>.</p>
-    <p>On stage she has been featured vocalist and substitute lead MC with <a href="https://www.instagram.com/lucillecrew/">Lucille Crew</a> (2022–2025), opened for <a href="https://www.instagram.com/n.tayeb/">Ninet Tayeb</a> at Hangar 11 and for <a href="https://www.instagram.com/oivavoiband/">Oi Va Voi</a> at EartH – her first official London show – headlined Kuli Alma, played the <a href="https://www.instagram.com/israel_music_showcase_festival/">Israel Music Showcase Festival</a> and held a monthly residency at The George Hotel's Jazz Hall. In October 2026 she headlined <a href="https://www.instagram.com/p/Dej3lnDiFFV/">Art Club TLV</a> with her band. She performs as a trio (vocals + Ableton, drums, guitar) or an acoustic duo.</p>
+    <p>Shaked Miller blends punchy rap with sultry R&amp;B, drawing on Eminem, Justin Timberlake and Lauryn Hill. A proud Jewish and queer artist, she raps and sings about Jewish identity, queerness and LGBTQ+ life, and the freedom to be who you are without apologising – honest and unapologetic, because humanity is weird.</p>
+    <p>Her new songs take on antisemitism head-on. Speaking from her Mizrahi Jewish roots, she answers the hate, the stereotypes and the lies with sharp bars and humour – not as a politician, but in her own voice. Her 2026 reels with <a href="https://www.instagram.com/p/Db6RPGWIdAT/">Jews in School</a> (<a href="https://www.instagram.com/p/Dbc8I-3osGP/">"If You Jews You Lose"</a>) reached more than 23K likes.</p>
+    <p>Her debut album <a href="https://open.spotify.com/album/5LxutKVQ1TpdWIyLvc70zU"><i>Best of This World</i></a> (<a href="https://www.instagram.com/kamea_music/">Kamea</a>, 2023) introduced <a href="https://open.spotify.com/album/7jkb1ZBkgwLnFZrnxkotW1">"Hold On"</a>, <a href="https://open.spotify.com/album/6PWegWUrGbbIWNMQJShJnl">"Get The Girl"</a>, <a href="https://open.spotify.com/album/27J4WCR0CBYhMHspjzhbAq">"Clouds"</a> and <a href="https://open.spotify.com/album/1P1DvQHePHoTH6N9CIUUsi">"Take It All Away"</a> with <a href="https://www.instagram.com/galdepaz/">Gal De Paz</a>; her new, unreleased material pairs raw lyrics with Y2K-flavoured production.</p>
+    <p>Behind the desk she produced and arranged Yeled's <a href="https://open.spotify.com/track/2Ozdz3Hhfigkq8U9XW4f0Z">"Gveret Taltalim"</a> (1.3M+ Spotify streams, Apple Music Israel Top 100), writes and records as a songwriter and vocalist for <a href="https://artlist.io/royalty-free-music/artist/shaked-miller/2594">Artlist Originals</a>, and has fronted <a href="https://www.waves.com/">Waves Audio</a> ads and social content since 2023.</p>
+    <p>On stage she has been featured vocalist and substitute lead MC with <a href="https://www.instagram.com/lucillecrew/">Lucille Crew</a> (2022–2025), opened for <a href="https://www.instagram.com/n.tayeb/">Ninet Tayeb</a> at Hangar 11 and for <a href="https://www.instagram.com/oivavoiband/">Oi Va Voi</a> at EartH – her first official London show – headlined Kuli Alma, played the <a href="https://www.instagram.com/israel_music_showcase_festival/">Israel Music Showcase Festival</a>. In October 2026 she headlined <a href="https://www.instagram.com/p/Dej3lnDiFFV/">Art Club TLV</a> with her band.</p>
    </div>
   </div>
   <div class="side">
@@ -449,7 +469,7 @@ footer a{color:#5B3A26}
   <div class="q">"Soul and bite in equal measure."<small>Plastic Magazine</small></div>
   <div class="q">"An electrifying performer."<small><a href="https://www.instagram.com/oivavoiband/">Oi Va Voi</a></small></div>
  </div>
- <div class="foot"><span>Shaked Miller · EPK</span><span>2</span></div>
+ <div class="foot" style="bottom:3.5mm"><span>Shaked Miller · EPK</span><span>2</span></div>
 </div>
 
 <!-- 3 CREDITS -->
@@ -566,6 +586,7 @@ footer a{color:#5B3A26}
    </ul>
    <h3 style="margin-top:5mm">Watch</h3>
    <ul class="links">
+    <li><b>▶ Showreel 2026</b> – <a href="https://shakedmillercv.github.io/#epk">shakedmillercv.github.io</a></li>
     <li><b>YouTube</b> – <a href="https://youtube.com/@ShakedMillerMusic">@ShakedMillerMusic</a></li>
     <li><b><a href="https://youtu.be/pRW8KGjVOsk">Waves Tune Real-Time</a> ad</b> – <a href="https://youtu.be/pRW8KGjVOsk">YouTube</a></li>
     <li><b>Waves <a href="https://youtu.be/oS3DZEFhA9w">Clarity Vx DeReverb</a> ad</b> – <a href="https://youtu.be/oS3DZEFhA9w">YouTube</a></li>
@@ -617,6 +638,7 @@ footer a{color:#5B3A26}
 </div>
 
 <!-- WAVES -->
+<div class="reel"><div><div class="rk">Showreel · 2026</div><h2>Watch<br>Shaked live</h2><p>Two minutes from the 2026 live shows – rap, R&amp;B and a band that hits hard.</p></div><div class="vbox"><video class="reelv" playsinline preload="none" poster="reel_poster.jpg"></video><button class="play" type="button"><span class="t">Play showreel</span><span class="c"></span></button></div></div>
 <div class="page">
  <div class="kicker">Commercial performer · 2023 –</div>
  <h2>Waves Audio</h2>
@@ -835,7 +857,7 @@ footer a{color:#5B3A26}
   Berlin, Germany<br><br>
   <a href="https://shakedmiller.com/" style="border-color:var(--sand)">shakedmiller.com</a> · <a href="https://shakedmiller.com/production-services" style="border-color:var(--sand)">production services</a><br>
   <a href="https://www.instagram.com/shakedmiller/" style="border-color:var(--sand)">Instagram @shakedmiller</a> · <a href="https://www.tiktok.com/@shaked.miller4" style="border-color:var(--sand)">TikTok @shaked.miller4</a><br>
-  <a href="https://open.spotify.com/artist/7Ax3QEFi6NXeuiAB025OaQ" style="border-color:var(--sand)">Spotify</a> · <a href="https://youtube.com/@ShakedMillerMusic" style="border-color:var(--sand)">YouTube</a> · <a href="https://artlist.io/royalty-free-music/artist/shaked-miller/2594" style="border-color:var(--sand)">Artlist</a>
+  <a href="https://shakedmillercv.github.io/#epk" style="border-color:var(--sand)">▶ Showreel 2026</a> · <a href="https://open.spotify.com/artist/7Ax3QEFi6NXeuiAB025OaQ" style="border-color:var(--sand)">Spotify</a> · <a href="https://youtube.com/@ShakedMillerMusic" style="border-color:var(--sand)">YouTube</a> · <a href="https://artlist.io/royalty-free-music/artist/shaked-miller/2594" style="border-color:var(--sand)">Artlist</a>
  </div>
  <div style="position:absolute;left:15mm;bottom:22mm;font-size:9.5pt;color:var(--sand)">Represented by Susan Rosenberg, <a href="https://www.instagram.com/mockle_music/" style="border-color:var(--sand)">Mockle Music</a>, NY</div>
  <div class="foot" style="color:var(--sand)"><span>Shaked Miller · Portfolio</span><span>13</span></div>
@@ -849,4 +871,9 @@ document.querySelectorAll('.doc').forEach(function(s){s.hidden=s.id!==h});
 document.querySelectorAll('nav a.tab').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h)});window.scrollTo(0,0)}
 window.addEventListener('resize',fit);window.addEventListener('hashchange',show);fit();show();
 </script>
-</body></html>
+
+<script>
+(function(){var p=null;function load(){if(!p){p=Promise.all([0,1,2,3,4,5].map(function(i){return fetch('reel'+i+'.bin').then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}).then(function(b){return i===0?b.slice(2):b})})).then(function(b){return URL.createObjectURL(new Blob(b,{type:'video/mp4'}))})}return p}
+document.querySelectorAll('.reel .play').forEach(function(btn){btn.addEventListener('click',function(){var v=btn.parentNode.querySelector('video');btn.querySelector('.t').textContent='Loading…';load().then(function(u){v.src=u;v.controls=true;btn.hidden=true;v.play().catch(function(){})}).catch(function(){p=null;v.src='showreel.mp4';v.controls=true;btn.hidden=true;v.play().catch(function(){})})})});
+document.addEventListener('play',function(e){document.querySelectorAll('.reel video').forEach(function(v){if(v!==e.target)v.pause()})},true);})();
+</script></body></html>
